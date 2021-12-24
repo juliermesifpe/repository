@@ -10,26 +10,28 @@
     </head>
 
     <body>
-        <header class="cabecalho"> <!--cabecalho-->
-            <section class="menu"> <!--menu-->
-                <nav class="menu_navegacao">  <!--navegacao-->
-                    <a class="menu_campos" asp-area="" asp-controller="Home" asp-action="Index">Cadastro</a>
-                    <a class="menu_campos" asp-area="" asp-controller="Home" asp-action="Produtos">Produtos</a>
-                    <a class="menu_campos" asp-area="" asp-controller="Home" asp-action="Compras">Compras</a>
+       <header class="cabecalho"> 
+           <section class="menu"> 
+               <nav class="grupo_navegacao">  
+                    <a class="navegacao" asp-area="" asp-controller="Home" asp-action="Index">Cadastro</a>
+                    <a class="navegacao" asp-area="" asp-controller="Home" asp-action="Produtos">Produtos</a>
+                    <a class="navegacao" asp-area="" asp-controller="Home" asp-action="Compras">Compras</a>
                 </nav>
                 
-                <figure class="logo"><!--logo-->
-                    <img class="logo_imagem" src="~/img/images.png" alt="">
+                <figure class="grupo_logo">
+                    <img class="logo" src="~/img/images.png" alt="">
                 </figure>
             </section>
         </header>
 
-        <main class="conteudo"><!--conteudo-->
+       <main class="conteudo">
             @RenderBody()
         </main>
 
-        <footer class="rodape"><!--rodape-->
-       
+      <footer class="rodape">
+            <section class="contato">
+
+            </section>
         </footer>
 
         <script src="~/lib/jquery/dist/jquery.min.js"></script>

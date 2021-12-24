@@ -1,48 +1,58 @@
-* {
-    /*all: revert;*/
-    box-sizing: border-box;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-body {
-    display: grid;
-    grid-template-rows: minmax(15vh,auto) minmax(70vh,auto) minmax(15vh,auto);
-    min-width:max-content;
-}
-
-.cabecalho {
-    background-color: red;
-}
-
-.conteudo {
-    background-color: rebeccapurple;
-}
-
-.rodape {
-    background-color: royalblue;
-}
-
-.menu {
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    justify-content: space-between;
-}
-.menu_navegacao {
-    margin-left: 4vw !important;
-}
-.menu_campos {
-    text-decoration: none;
-    color: black;
-}
-.menu_campos:active{
-    color:white;
-}
-.logo_imagem {
-    height: 15vh;
-}
-
 @media (max-width: 768px) {
-}
+    * {
+        /*all: revert;*/
+        box-sizing: border-box;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 
+    body {
+        display: grid;
+        grid-template-rows: minmax(15vh,auto) minmax(70vh,auto) minmax(15vh,auto);
+        min-width: max-content;
+    }
+    .cabecalho {
+        background-color: red;
+    }
+    .conteudo {
+        background-color: rebeccapurple;
+    }
+    .rodape {
+        background-color: royalblue;
+    }
+    
+    .cabecalho .menu {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cabecalho .menu .navegacao {
+        text-decoration: none;
+        color: black;
+        margin-left: 4vw !important;
+    }
+    .cabecalho .menu .navegacao:active {
+        color: white;
+    }
+    .cabecalho .menu .logo {
+        height: 15vh;
+    }
+
+    .conteudo .cadastro .formulario {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        min-height: 70vh;
+        row-gap: 2vh;
+        margin: 2vh 0 !important;
+    }
+    .conteudo .cadastro .grupo_campos {
+        display: grid;
+        row-gap: 1vh;
+        max-width: 90%;
+    }
+    .conteudo .cadastro .campos {
+        display: grid;
+    }
+}

@@ -1,4 +1,51 @@
 ﻿@{
     ViewData["Title"] = "Cadastro";
 }
+ 
+   <section class="cadastro">
+       <form action="" class="formulario">
+           <div class="grupo_titulo">
+                <h1>Cadastro</h1>
+            </div>
+           
+            <div class="grupo_campos">
+                <div class="campos">
+                    <label for="codigo">Código</label>
+                    <input type="number" name="" id="codigo">                   
+                </div>
+
+                <div class="campos">
+                    <label for="produto">Produto</label>
+                    <input type="text" name="produto" id="produto">                   
+                </div>
+
+                <div class="campos"> 
+                    <label for="preco">Preço</label>
+                    <input type="number" name="preco" id="preco">
+                </div>
+
+                <div class="campos"> 
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" name="quantidade" id="quantidade">
+                </div>
+                
+                <div class="campos">
+                    <label for="descricao">Descrição</label>
+                    <textarea  type="text" name="descricao" id="descricao"></textarea>
+                </div>
+
+                <div class="campos">
+                    <label for="imagem">Imagem</label>
+                    <input type="file" name="" id="imagem" accept="image/*" capture>
+                </div>
+            </div>
+
+          <div class="grupo_funcoes">
+                <button type="button" id="consultar" onclick="Consultar(this.id)">Consultar</button>
+                <button type="button" id="salvar" onclick="Salvar(this.id)">Salvar</button>
+                <button type="button" id="excluir" onclick="Excluir()">Excluir</button>
+                <button type="reset" id="limpar" onclick="Limpar()">Limpar</button>
+            </div>
+        </form>
+    </section>
 
