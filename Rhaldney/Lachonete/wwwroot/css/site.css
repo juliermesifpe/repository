@@ -1,18 +1,48 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+* {
+    /*all: revert;*/
+    box-sizing: border-box;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 body {
-  margin-bottom: 60px;
+    display: grid;
+    grid-template-rows: minmax(15vh,auto) minmax(70vh,auto) minmax(15vh,auto);
+    min-width:max-content;
 }
+
+.cabecalho {
+    background-color: red;
+}
+
+.conteudo {
+    background-color: rebeccapurple;
+}
+
+.rodape {
+    background-color: royalblue;
+}
+
+.menu {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu_navegacao {
+    margin-left: 4vw !important;
+}
+.menu_campos {
+    text-decoration: none;
+    color: black;
+}
+.menu_campos:active{
+    color:white;
+}
+.logo_imagem {
+    height: 15vh;
+}
+
+@media (max-width: 768px) {
+}
+
