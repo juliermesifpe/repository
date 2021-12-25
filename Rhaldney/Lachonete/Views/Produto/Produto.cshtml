@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Produtos";
+}
+<section class="produto">
+      @if (!ViewBag.produtoModelList.Equals(""))
+        {
+            @foreach (var produtoModelList in ViewBag.produtoModelList)
+            {
+                string[] produtoModel = produtoModelList.Split('#');
+
+                <div>
+                    <p>@produtoModel[0]</p>
+                    <p>@produtoModel[1]</p>
+                    <p>@produtoModel[2]</p>
+                    <p>@produtoModel[3]</p>
+                    <p>@produtoModel[4]</p>
+                    <p>@produtoModel[5]</p>
+                </div>
+            }
+        }        
+</section>

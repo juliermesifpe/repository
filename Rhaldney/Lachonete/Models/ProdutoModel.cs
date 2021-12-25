@@ -9,6 +9,8 @@
         public string Descricao { get; set; }
         public string Imagem { get; set; }
 
+        List<ProdutoModel>produtoModelsList = new List<ProdutoModel>();
+
         public int RetornarId()
         {
             return this.Id;

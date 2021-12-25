@@ -4,10 +4,7 @@
     {
         int GerarId();
         void Salvar(Produto produto);
-        List<Produto> Listar();
-        void EscreverFileAdicionar(Produto produto);
-        IEnumerable<String> LerFileAdicionar();
-        IEnumerable<String> LerFileCadastrar();
+        IEnumerable<String> Listar();
         Task PegarId(int id);
         void Atualizar(int id, Produto produto);
         void Excluir(int id);

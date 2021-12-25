@@ -1,10 +1,16 @@
 ﻿@{
     ViewData["Title"] = "Cadastro";
 }
- 
-   <section class="cadastro">
-       <form action="" class="formulario" method="">
-           <div class="grupo_titulo">
+    <!--
+       ProdutoModel 
+        * as variavés devem ser iguais aos name
+
+       ProdutoControllers 
+        * recebe os dados
+   -->
+    <section class="cadastro">
+        <form action="~/Produto/Salvar" class="formulario" method="post">
+            <div class="grupo_titulo">
                 <h1>Cadastro</h1>
             </div>
            
@@ -40,12 +46,11 @@
                 </div>
             </div>
 
-          <div class="grupo_funcoes">
+            <div class="grupo_funcoes">
                 <button type="button" id="consultar" onclick="Consultar(this.id)">Consultar</button>
-                <button type="button" id="salvar" onclick="Salvar(this.id)">Salvar</button>
+                <button type="submit" id="salvar" onclick="Salvar(this.id)">Salvar</button>
                 <button type="button" id="excluir" onclick="Excluir()">Excluir</button>
                 <button type="reset" id="limpar" onclick="Limpar()">Limpar</button>
             </div>
         </form>
     </section>
-
