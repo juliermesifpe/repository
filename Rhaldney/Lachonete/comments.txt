@@ -1,0 +1,10 @@
+1
+criar uma classe "ProdutoModel" na pasta Models
+
+2
+criar uma pasta "Interfaces"
+criar uma interface "ProdutoInterface" na pasta Interfaces
+
+3
+criar uma pasta "Repository"
+criar uma classe "ProdutoRepository" na pasta
