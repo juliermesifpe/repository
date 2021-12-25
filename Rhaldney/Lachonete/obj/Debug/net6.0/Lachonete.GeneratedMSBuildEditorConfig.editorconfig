@@ -15,16 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = G:\Meu Drive\repository\Rhaldney\Lachonete
 build_property._RazorSourceGeneratorDebug = 
 
-[G:/Meu Drive/repository/Rhaldney/Lachonete/Views/Home/Compras.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wcmFzLmNzaHRtbA==
+[G:/Meu Drive/repository/Rhaldney/Lachonete/Views/Produto/Compras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xDb21wcmFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Meu Drive/repository/Rhaldney/Lachonete/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[G:/Meu Drive/repository/Rhaldney/Lachonete/Views/Produto/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Meu Drive/repository/Rhaldney/Lachonete/Views/Home/Produtos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdXRvcy5jc2h0bWw=
+[G:/Meu Drive/repository/Rhaldney/Lachonete/Views/Produto/Produtos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xQcm9kdXRvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [G:/Meu Drive/repository/Rhaldney/Lachonete/Views/Shared/Error.cshtml]

@@ -4,11 +4,11 @@ using System.Diagnostics;
 
 namespace Lachonete.Controllers
 {
-    public class HomeController : Controller
+    public class ProdutoController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<ProdutoController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public ProdutoController(ILogger<ProdutoController> logger)
         {
             _logger = logger;
         }

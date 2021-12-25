@@ -1,10 +1,31 @@
 1
-criar uma classe "ProdutoModel" na pasta Models
+criar uma classe "ProdutoModel.cs" na pasta Models
 
 2
 criar uma pasta "Interfaces"
-criar uma interface "ProdutoInterface" na pasta Interfaces
+criar uma interface "ProdutoInterface.cs" na pasta Interfaces
 
 3
-criar uma pasta "Repository"
-criar uma classe "ProdutoRepository" na pasta
+criar uma pasta "Repositorys"
+criar uma classe "ProdutoRepository.cs" na pasta
+
+4
+Na pasta Controllers renomear o arquivo 
+"HomeController.cs" 
+para 
+"ProdutoController.cs"
+
+Na pasta Views renomear a pasta 
+"Home" 
+para 
+"Produto"
+
+Na pasta Shared no arquivo "_Layout.cshtml" renomear tags
+"<a class="navegacao" asp-area="" asp-controller="Home" asp-action="Index">Cadastro</a>"
+para
+"<a class="navegacao" asp-area="" asp-controller="Produto" asp-action="Index">Cadastro</a>"
+
+No arquivo "Program.cs" renomear campos
+app.UseExceptionHandler("/Home/Error"); para app.UseExceptionHandler("/Produto/Error");
+pattern: "{controller=Home}/{action=Index}/{id?}");"para pattern: "{controller=Produto}/{action=Index}/{id?}");"
+

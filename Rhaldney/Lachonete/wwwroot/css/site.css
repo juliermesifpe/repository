@@ -1,7 +1,7 @@
 @media (max-width: 768px) {
     * {
         /*all: revert;*/
-        box-sizing: border-box;
+        box-sizing: border-box !important;
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -9,50 +9,61 @@
     body {
         display: grid;
         grid-template-rows: minmax(15vh,auto) minmax(70vh,auto) minmax(15vh,auto);
-        min-width: max-content;
     }
     .cabecalho {
         background-color: red;
     }
     .conteudo {
         background-color: rebeccapurple;
+        display: grid;
+        align-items: center;
     }
     .rodape {
         background-color: royalblue;
     }
-    
+
     .cabecalho .menu {
         display: grid;
         grid-auto-flow: column;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
+    }
+    .cabecalho .menu .grupo_navegacao {
+        margin-left: 4.5vw !important;
     }
     .cabecalho .menu .navegacao {
         text-decoration: none;
         color: black;
-        margin-left: 4vw !important;
     }
     .cabecalho .menu .navegacao:active {
         color: white;
+    }
+    .cabecalho .menu .grupo_logo{
+
     }
     .cabecalho .menu .logo {
         height: 15vh;
     }
 
+    .conteudo .cadastro{
+
+    }
     .conteudo .cadastro .formulario {
         display: grid;
         justify-items: center;
-        align-items: center;
-        min-height: 70vh;
         row-gap: 2vh;
-        margin: 2vh 0 !important;
+        margin: 4vh 0 !important;
+    }
+    .conteudo .cadastro .grupo_titulo{
+
     }
     .conteudo .cadastro .grupo_campos {
-        display: grid;
-        row-gap: 1vh;
-        max-width: 90%;
+       
     }
     .conteudo .cadastro .campos {
-        display: grid;
+        display:grid;
+    }
+    .conteudo .cadastro .grupo_funcoes{
+
     }
 }
