@@ -11,59 +11,69 @@
         grid-template-rows: minmax(15vh,auto) minmax(70vh,auto) minmax(15vh,auto);
     }
     .cabecalho {
-        background-color: red;
+        background-color: black;
     }
     .conteudo {
-        background-color: rebeccapurple;
+        background-color: darkgray;
         display: grid;
         align-items: center;
     }
     .rodape {
-        background-color: royalblue;
+        background-color: black;
     }
 
-    .cabecalho .menu {
+    .menu {
         display: grid;
-        grid-auto-flow: column;
-        justify-content: space-between;
+        grid-template-columns: 1fr 0fr;
+        justify-items: center;
         align-items: center;
     }
-    .cabecalho .menu .grupo_navegacao {
-        margin-left: 4.5vw !important;
-    }
-    .cabecalho .menu .navegacao {
+    .menu_navegacao a{
         text-decoration: none;
-        color: black;
-    }
-    .cabecalho .menu .navegacao:active {
         color: white;
     }
-    .cabecalho .menu .grupo_logo{
-
+    .menu_navegacao a:active {
+        color: darkgray;
     }
-    .cabecalho .menu .logo {
+    .menu_logo img{
         height: 15vh;
     }
 
-    .conteudo .cadastro{
-
-    }
-    .conteudo .cadastro .formulario {
+    .cadastro_formulario {
         display: grid;
         justify-items: center;
         row-gap: 2vh;
         margin: 4vh 0 !important;
     }
-    .conteudo .cadastro .grupo_titulo{
-
-    }
-    .conteudo .cadastro .grupo_campos {
-       
-    }
-    .conteudo .cadastro .campos {
+    .cadastro_campos div{
         display:grid;
     }
-    .conteudo .cadastro .grupo_funcoes{
 
+    .produto_item {
+        display: grid;
+        row-gap: 2vh;
+        border: 2px solid;
+        padding: 1vh 1vw !important;
+        margin: 1vh 5vw !important;
+    }
+    .produto_informacoes1 {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-evenly;
+    }
+    .produto_informacoes2 {
+        display: grid;
+        grid-template-columns: 0fr 1fr;
+        column-gap: 1vw;
+    }
+    .produto_informacoes2 img{
+        width:15vh;
+        border: 2px solid;
+    }
+    .produto_informacoes2 p {
+        border: 2px solid;
+    }
+    .produto_funcoes {
+        text-align: center
     }
 }

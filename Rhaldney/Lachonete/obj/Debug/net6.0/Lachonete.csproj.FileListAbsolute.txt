@@ -1,10 +1,10 @@
+G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\Lachonete.exe
+G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\Lachonete.dll
 G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\appsettings.Development.json
 G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\appsettings.json
 G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\Lachonete.staticwebassets.runtime.json
-G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\Lachonete.exe
 G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\Lachonete.deps.json
 G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\Lachonete.runtimeconfig.json
-G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\Lachonete.dll
 G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\ref\Lachonete.dll
 G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\Lachonete.pdb
 G:\Meu Drive\repository\Rhaldney\Lachonete\obj\Debug\net6.0\Lachonete.csproj.AssemblyReference.cache

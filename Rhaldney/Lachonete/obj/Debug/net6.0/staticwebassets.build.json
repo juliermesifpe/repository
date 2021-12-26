@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "itf5jZ6d9NMCqAfWVHvijtR3oMmONhfNp58M/1zlEM0=",
+  "Hash": "Mgtpc2wMZeOPRENFudzcnMcDJOKzkGZqMxshv2OopWI=",
   "Source": "Lachonete",
   "BasePath": "_content/Lachonete",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\files\\produto.txt",
+      "SourceId": "Lachonete",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
+      "BasePath": "_content/Lachonete",
+      "RelativePath": "files/produto.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\produto.txt"
     },
     {
       "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\img\\images.png",

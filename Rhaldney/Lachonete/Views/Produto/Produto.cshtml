@@ -3,19 +3,28 @@
 }
 <section class="produto">
       @if (!ViewBag.produtoModelList.Equals(""))
+      {    
+        @foreach (var produtoModelList in ViewBag.produtoModelList)
         {
-            @foreach (var produtoModelList in ViewBag.produtoModelList)
-            {
-                string[] produtoModel = produtoModelList.Split('#');
+            string[] produtoModel = produtoModelList.Split('#');
 
-                <div>
-                    <p>@produtoModel[0]</p>
-                    <p>@produtoModel[1]</p>
-                    <p>@produtoModel[2]</p>
-                    <p>@produtoModel[3]</p>
-                    <p>@produtoModel[4]</p>
-                    <p>@produtoModel[5]</p>
-                </div>
-            }
-        }        
+            <div class="produto_item">
+            <div class="produto_informacoes1">
+                <p>Código: @produtoModel[1]</p>
+                <p>@produtoModel[2]</p>
+                <p>R$ @produtoModel[3]</p>
+                <p>Estoque: @produtoModel[4]</p>
+            </div>
+            <div class="produto_informacoes2">
+                <img src="~/img/images.png" alt="">
+                <p>Descrição: @produtoModel[5]</p>
+            </div>
+            <div class="produto_funcoes">
+                <button type="button" id="adicionar" onclick="Adcionar(this.id)">Adicionar</button>
+                <button type="button" id="remover" onclick="Remover(this.id)">Remover</button>
+            </div>
+        </div>
+        }
+      }
 </section>
+

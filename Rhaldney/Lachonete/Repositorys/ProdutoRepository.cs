@@ -14,7 +14,7 @@ namespace Lachonete.Repository
 
         public int GerarId()
         {
-            var produtoModelList = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "Files", "Produto.txt"));
+            var produtoModelList = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"));
             return produtoModelList.Count();
         }
 
@@ -31,14 +31,14 @@ namespace Lachonete.Repository
 
             // cria um arquivo Produto.txt na pasta File
             File.AppendAllText(
-                Path.Combine(Directory.GetCurrentDirectory(), "Files", "Produto.txt"),
+                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"),
                 $"{DateTime.Now}#{produtoModel.Id}#{produtoModel.Produto}#{produtoModel.Preco}#{produtoModel.Quantidade}#{produtoModel.Descricao}#{produtoModel.Imagem}{Environment.NewLine}"
             );
         }
 
         public IEnumerable<string> Listar()
         {
-            var produtoModelList = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "Files", "Produto.txt"));
+            var produtoModelList = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"));
 
             return produtoModelList;
         }
