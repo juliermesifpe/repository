@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string Produto { get; set; }
-        public double Preco { get; set; }
+        public string Preco { get; set; }
         public int Quantidade { get; set; }
         public string Descricao { get; set; }
         public string Imagem { get; set; }
@@ -15,7 +15,7 @@
         {
             return this.Id;
         }
-        public double RetornarPreco()
+        public string RetornarPreco()
         {
             return this.Preco;
         }

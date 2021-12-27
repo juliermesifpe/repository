@@ -9,21 +9,26 @@
             string[] produtoModel = produtoModelList.Split('#');
 
             <div class="produto_item">
-            <div class="produto_informacoes1">
-                <p>Código: @produtoModel[1]</p>
-                <p>@produtoModel[2]</p>
-                <p>R$ @produtoModel[3]</p>
-                <p>Estoque: @produtoModel[4]</p>
+                 <div class="produto_informacoes">
+                     <p>Cód: @produtoModel[1]</p>
+                    <p>Preço: R$ @produtoModel[3]</p>
+                    <p>Estoque: @produtoModel[4]</p>
+                </div>
+
+                <div class="produto_funcoes">
+                    <img src="~/img/images.png" alt="">
+                    <button type="button" id="adicionar" onclick="Adcionar(this.id)">Adicionar</button>
+                    <button type="button" id="remover" onclick="Remover(this.id)">Remover</button>
+                </div>
+
+                <div class="produto_descricao">
+                    <details>
+                        <summary>Descrição</summary>
+                        <p>@produtoModel[2]</p>
+                        <p>@produtoModel[5]</p>
+                    </details>
+                </div>
             </div>
-            <div class="produto_informacoes2">
-                <img src="~/img/images.png" alt="">
-                <p>Descrição: @produtoModel[5]</p>
-            </div>
-            <div class="produto_funcoes">
-                <button type="button" id="adicionar" onclick="Adcionar(this.id)">Adicionar</button>
-                <button type="button" id="remover" onclick="Remover(this.id)">Remover</button>
-            </div>
-        </div>
         }
       }
 </section>
