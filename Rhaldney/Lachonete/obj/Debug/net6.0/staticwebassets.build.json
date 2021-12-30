@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Mgtpc2wMZeOPRENFudzcnMcDJOKzkGZqMxshv2OopWI=",
+  "Hash": "b4nE3n8rFXcGoLoqy0MY8IYIW1OSYjk7M9I4fTfh9r0=",
   "Source": "Lachonete",
   "BasePath": "_content/Lachonete",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Lachonete.bundle.scp.css"
+    },
+    {
+      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\css\\formulario.css",
+      "SourceId": "Lachonete",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
+      "BasePath": "_content/Lachonete",
+      "RelativePath": "css/formulario.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\formulario.css"
     },
     {
       "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\css\\site.css",

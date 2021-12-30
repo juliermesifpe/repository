@@ -14,13 +14,11 @@
     .cabecalho {
         background-color: black;
     }
-
     .conteudo {
         background-color: darkgray;
         display: grid;
         align-items: center;
     }
-
     .rodape {
         background-color: black;
     }
@@ -29,16 +27,13 @@
         display: grid;
         grid-template-columns: 1fr 0fr;
     }
-
     .menu_navegacao a {
         text-decoration: none;
         color: white;
     }
-
     .menu_navegacao a:active {
         color: darkgray;
     }
-
     .menu_logo img {
         height: 15vh;
     }
@@ -49,8 +44,7 @@
         row-gap: 2vh;
         margin: 4vh 0 !important;
     }
-
-    .cadastro_campos div {
+    .cadastro_campos span {
         display: grid;
     }
 
@@ -61,25 +55,21 @@
         padding: 1vh 1vw !important;
         margin: 1vh 5vw !important;
     }
-
     .produto_informacoes {
         display: grid;
         grid-auto-flow: column;
         justify-content: space-between;
     }
-
     .produto_funcoes {
         display: grid;
         grid-auto-flow: column;
         align-items: center;
         justify-content: space-evenly;
     }
-
-        .produto_funcoes img {
-            width: 15vh;
-            border: 2px solid;
-        }
-
+    .produto_funcoes img {
+        width: 15vh;
+        border: 2px solid;
+    }
     .produto_descricao summary {
         text-align: center;
     }
@@ -136,7 +126,7 @@
         row-gap: 2vh;
         margin: 4vh 0 !important;
     }
-    .cadastro_campos div{
+    .cadastro_campos span{
         display:grid;
     }
 

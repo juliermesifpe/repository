@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.cadastro_label {
+    display: block !important;
+    margin-bottom: 0.2em !important;
+    color: #555 !important;
+}
+
+.cadastro_input {
+    padding: 0.7em !important;
+    border: 1px solid #ccc !important;
+}

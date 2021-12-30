@@ -1,56 +1,44 @@
 ﻿@{
-    ViewData["Title"] = "Cadastro";
+   ViewData["Title"] = "Cadastro";
 }
-    <!--
-       ProdutoModel 
-        * as variavés devem ser iguais aos name
+<section class="cadastro">
+    <form class="cadastro_formulario" action="~/Produto/Salvar"  method="post">
+        <div class="cadastro_titulo">
+            <h1>Cadastro</h1>
+        </div>
 
-       ProdutoControllers 
-        * recebe os dados
-   -->
-    <section class="cadastro">
-        <form class="cadastro_formulario" action="~/Produto/Salvar"  method="post">
-            <div class="cadastro_titulo">
-                <h1>Cadastro</h1>
-            </div>
-           
-            <div class="cadastro_campos">
-                <div>
-                    <label for="codigo">Código</label>
-                    <input type="number" name="Codigo" id="codigo">                   
-                </div>
+        <div class="cadastro_campos">
+            <span>
+                <label for="codigo">Código</label>
+                <input type="number" name="Codigo" id="codigo">                   
+            </span>
+            <span>
+                <label for="produto">Produto</label>
+                <input type="text" name="Produto" id="produto">                   
+            </span>
+            <span> 
+                <label for="preco">Preço</label>
+                <input type="number" name="Preco" id="preco" step="any">
+            </span>
+            <span> 
+                <label for="quantidade">Quantidade</label>
+                <input type="number" name="Quantidade" id="quantidade">
+            </span>
+            <span>
+                <label for="descricao">Descrição</label>
+                <textarea  type="text" name="Descricao" id="descricao"></textarea>
+            </span>
+            <span>
+                <label for="imagem">Imagem <span></span></label>
+                <input type="file" name="Imagem" id="imagem" accept="image/*" capture>
+            </span>
+        </div>
 
-                <div>
-                    <label for="produto">Produto</label>
-                    <input type="text" name="Produto" id="produto">                   
-                </div>
-
-                <div> 
-                    <label for="preco">Preço</label>
-                    <input type="number" name="Preco" id="preco" step="any">
-                </div>
-
-                <div> 
-                    <label for="quantidade">Quantidade</label>
-                    <input type="number" name="Quantidade" id="quantidade">
-                </div>
-                
-                <div>
-                    <label for="descricao">Descrição</label>
-                    <textarea  type="text" name="Descricao" id="descricao"></textarea>
-                </div>
-
-                <div>
-                    <label for="imagem">Imagem</label>
-                    <input type="file" name="Imagem" id="imagem" accept="image/*" capture>
-                </div>
-            </div>
-
-            <div class="cadastro_funcoes">
-                <button type="button" id="consultar" onclick="Consultar(this.id)">Consultar</button>
-                <button type="submit" id="salvar" onclick="Salvar(this.id)">Salvar</button>
-                <button type="button" id="excluir" onclick="Excluir()">Excluir</button>
-                <button type="reset" id="limpar" onclick="Limpar()">Limpar</button>
-            </div>
-        </form>
-    </section>
+        <div class="cadastro_funcoes">
+            <button type="submit" id="consultar">Consultar</button>
+            <button type="submit" id="salvar">Salvar</button>
+            <button type="submit" id="excluir">Excluir</button>
+            <button type="submit" id="limpar">Limpar</button>
+        </div>
+    </form>
+</section>
