@@ -1,9 +1,7 @@
 ﻿// executa quando o botão for clicado
-event.target.addEventListener("click", function (event) {
+document.getElementById("consultar").addEventListener("click", function (event) {
     // não deixa que o formulário seja enviado
     event.preventDefault();
-    alert(event.target);
-    return;
     // chama a função limpar passando o id consultar
     LimparFormulario(document.getElementById("consultar").id);
     // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
