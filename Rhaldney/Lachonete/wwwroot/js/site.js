@@ -4,40 +4,40 @@ document.getElementById("consultar").addEventListener("click", function (event) 
     event.preventDefault();
     // chama a função limpar passando o id consultar
     LimparFormulario(document.getElementById("consultar").id);
-    // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
-    if (ValidarConsultarExcluir().length > 0) return;
     // imprime no console o botão clicado e os dados preenchidos
     ImprimirConsole(document.getElementById("consultar").id);
-    //limpar formulário
-    ResetarFormulario();
+    // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
+    if (ValidarConsultarExcluir().length > 0) return;
+    // enviar formulário
+    SubmeterFormulario();
 });
 
 // executa quando o botão for clicado
 document.getElementById("salvar").addEventListener("click", function (event) {
     // não deixa que o formulário seja enviado
     event.preventDefault();
-     // chama a função limpar passando o id salvar
+    // chama a função limpar passando o id salvar
     LimparFormulario(document.getElementById("salvar").id);
-    // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
-    if (ValidarSalvar().length > 0) return;
     // imprime no console o botão clicado e os dados preenchidos
     ImprimirConsole(document.getElementById("salvar").id);
-    //limpar formulário
-    ResetarFormulario();
+    // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
+    if (ValidarSalvar().length > 0) return;
+    // enviar formulário
+    SubmeterFormulario();
 });
 
 // executa quando o botão for clicado
 document.getElementById("excluir").addEventListener("click", function (event) {
     // não deixa que o formulário seja enviado
     event.preventDefault();
-      // chama a função limpar passando o id excluir
+    // chama a função limpar passando o id excluir
     LimparFormulario(document.getElementById("excluir").id);
-    // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
-    if (ValidarConsultarExcluir().length > 0) return;
     // imprime no console o botão clicado e os dados preenchidos
     ImprimirConsole(document.getElementById("excluir").id);
-    //limpar formulário
-    ResetarFormulario();
+    // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
+    if (ValidarConsultarExcluir().length > 0) return;
+    // enviar formulário
+    SubmeterFormulario();
 });
 
 // executa quando o botão for clicado
@@ -50,12 +50,14 @@ document.getElementById("limpar").addEventListener("click", function (event) {
     ImprimirConsole(document.getElementById("limpar").id);
 });
 
+// função usada para limpar dados de acordo com o butão clicado
 function LimparFormulario(id) {
+    // limpa os dados que não são necessários para o salvar
     if (id == "limpar" || id == "salvar") {
         document.querySelector(".cadastro_campos").querySelectorAll("label")[0].textContent = "Código";
         document.getElementById("codigo").value = "";
     }
-
+    // limpa os dados que não são necessários para os butões consultar e excluir
     if (id == "limpar" || id == "consultar" || id == "excluir") {
         document.querySelector(".cadastro_campos").querySelectorAll("label")[1].textContent = "Produto";
         document.querySelector(".cadastro_campos").querySelectorAll("label")[2].textContent = "Preço";
@@ -68,6 +70,22 @@ function LimparFormulario(id) {
         document.getElementById("descricao").value = "";
         document.getElementById("imagem").value = "";
         return
+    }
+}
+
+function ImprimirConsole(id) {
+    console.clear();
+    console.log(document.getElementById(id).id);
+
+    if (id == "consultar" || id == "excluir") {
+        console.log("código: " + document.getElementById("codigo").value);
+    }
+    if (id == "salvar") {
+        console.log("produto: " + document.getElementById("produto").value);
+        console.log("preço: " + document.getElementById("preco").value);
+        console.log("quantidade: " + document.getElementById("quantidade").value);
+        console.log("descrição: " + document.getElementById("descricao").value);
+        console.log("imagem: " + document.getElementById("imagem").value);
     }
 }
 
@@ -105,21 +123,11 @@ function ValidarSalvar() {
     return label;
 }
 
-function ImprimirConsole(id) {
-    console.log(document.getElementById(id).id);
-
-    if (id == "consultar" || id == "excluir") {
-        console.log(document.getElementById("codigo").value);
-    }
-    if (id == "salvar") {
-        console.log(document.getElementById("produto").value);
-        console.log(document.getElementById("preco").value);
-        console.log(document.getElementById("quantidade").value);
-        console.log(document.getElementById("descricao").value);
-        console.log(document.getElementById("imagem").value);
-    }
+function SubmeterFormulario() {
+    document.querySelector(".cadastro_formulario").submit()
 }
 
+// função não está sendo usada
 function ResetarFormulario() {
     document.querySelector(".cadastro_formulario").reset();
 }

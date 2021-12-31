@@ -44,7 +44,7 @@
         row-gap: 2vh;
         margin: 4vh 0 !important;
     }
-    .cadastro_campos span {
+    .cadastro_campos aside {
         display: grid;
     }
 
@@ -126,7 +126,7 @@
         row-gap: 2vh;
         margin: 4vh 0 !important;
     }
-    .cadastro_campos span{
+    .cadastro_campos aside{
         display:grid;
     }
 

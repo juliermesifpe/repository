@@ -1,44 +1,44 @@
 ﻿@{
    ViewData["Title"] = "Cadastro";
 }
-<section class="cadastro">
-    <form class="cadastro_formulario" action="~/Produto/Salvar"  method="post">
-        <div class="cadastro_titulo">
+<article class="cadastro">
+    <form class="cadastro_formulario" action="~/Produto/Salvar"  method="post" enctype="multipart/form-data">
+        <section class="cadastro_titulo">
             <h1>Cadastro</h1>
-        </div>
+        </section>
 
-        <div class="cadastro_campos">
-            <span>
+        <section class="cadastro_campos">
+            <aside class="cadastro_codigo">
                 <label for="codigo">Código</label>
                 <input type="number" name="Codigo" id="codigo">                   
-            </span>
-            <span>
+            </aside>
+            <aside class="cadastro_produto">
                 <label for="produto">Produto</label>
                 <input type="text" name="Produto" id="produto">                   
-            </span>
-            <span> 
+            </aside>
+            <aside class="cadastro_preco"> 
                 <label for="preco">Preço</label>
                 <input type="number" name="Preco" id="preco" step="any">
-            </span>
-            <span> 
+            </aside>
+            <aside class="cadastro_quantidade"> 
                 <label for="quantidade">Quantidade</label>
                 <input type="number" name="Quantidade" id="quantidade">
-            </span>
-            <span>
+            </aside>
+            <aside class="cadastro_descricao">
                 <label for="descricao">Descrição</label>
                 <textarea  type="text" name="Descricao" id="descricao"></textarea>
-            </span>
-            <span>
-                <label for="imagem">Imagem <span></span></label>
+            </aside>
+            <aside class="cadastro_imagem">
+                <label for="imagem">Imagem</label>
                 <input type="file" name="Imagem" id="imagem" accept="image/*" capture>
-            </span>
-        </div>
+            </aside>
+        </section>
 
-        <div class="cadastro_funcoes">
+        <section class="cadastro_funcoes">
             <button type="submit" id="consultar">Consultar</button>
             <button type="submit" id="salvar">Salvar</button>
             <button type="submit" id="excluir">Excluir</button>
             <button type="submit" id="limpar">Limpar</button>
-        </div>
+        </section>
     </form>
-</section>
+</article>
