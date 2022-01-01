@@ -12,50 +12,57 @@ namespace Lachonete.Repository
             return produtoModelList;
         }*/
 
-        public int GerarId()
-        {
-            var produtoModelList = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"));
-            return produtoModelList.Count();
-        }
-
         public void Salvar(ProdutoModel produtoModel)
         {
-            // gera um Id
-            produtoModel.Id = GerarId();
-
-            /* adiciona produtoModel em produtoModelList
-            produtoModelList.Add(produtoModel);*/
+            // gera um Id "poderia seru um método GerarId"
+            var produtoModelList = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"));
+            produtoModel.Codigo = produtoModelList.Count();
 
             // cria uma pasta File
-            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "Files"));
+            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files"));
 
             // cria um arquivo Produto.txt na pasta File
             File.AppendAllText(
                 Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"),
-                $"{DateTime.Now}#{produtoModel.Id}#{produtoModel.Produto}#{produtoModel.Preco}#{produtoModel.Quantidade}#{produtoModel.Descricao}#{produtoModel.Imagem}{Environment.NewLine}"
+                $"{DateTime.Now}#{produtoModel.Codigo}#{produtoModel.Produto}#{produtoModel.Preco}#{produtoModel.Quantidade}#{produtoModel.Descricao}#{produtoModel.Imagem}{Environment.NewLine}"
             );
+
         }
 
         public IEnumerable<string> Listar()
         {
             var produtoModelList = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"));
-
             return produtoModelList;
         }
 
-        public void Atualizar(int id, ProdutoModel produtoModel)
+        public string Consultar(int codigo)
+        {
+           
+
+           var produtoModelList = Listar();
+
+            foreach(var produtoModel in produtoModelList)
+            {
+                string[] produto = produtoModel.Split('#');
+
+                if (produto[1].Equals(Convert.ToString(codigo)))
+                {
+                    return produtoModel;
+                }
+            }
+            return "";
+        }
+
+        public void Atualizar(int codigo, ProdutoModel produtoModel)
         {
             throw new NotImplementedException();
         }
 
-        public void Excluir(int id)
+        public void Excluir(int codigo)
         {
             throw new NotImplementedException();
         }
 
-        public Task PegarId(int id)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

@@ -2,32 +2,30 @@
 {
     public class ProdutoModel
     {
-        public int Id { get; set; }
+        public int Codigo { get; set; }
         public string Produto { get; set; }
         public double Preco { get; set; }
         public int Quantidade { get; set; }
         public string Descricao { get; set; }
         public string Imagem { get; set; }
 
-        List<ProdutoModel>produtoModelsList = new List<ProdutoModel>();
-
-        public int RetornarId()
+        public int retornarCodigo()
         {
-            return this.Id;
+            return this.Codigo;
         }
-        public double RetornarPreco()
+        public double retornarPreco()
         {
             return this.Preco;
         }
-        public int RetornarQuantidade()
+        public int retornarQuantidade()
         {
             return this.Quantidade;
         }
-        public string RetornarDescricao()
+        public string retornarDescricao()
         {
             return this.Descricao;
         }
-        public string RetornarImagem()
+        public string retornarImagem()
         {
             return this.Imagem;
         }

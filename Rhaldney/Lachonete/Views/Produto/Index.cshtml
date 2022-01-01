@@ -1,8 +1,11 @@
 ﻿@{
-   ViewData["Title"] = "Cadastro";
+    ViewData["Title"] = "Cadastro";
+    
+   
 }
+@ViewBag.produtoModel"
 <article class="cadastro">
-    <form class="cadastro_formulario" action="~/Produto/Salvar"  method="post" enctype="multipart/form-data">
+    <form class="cadastro_formulario" action=""  method="post" enctype="multipart/form-data">
         <section class="cadastro_titulo">
             <h1>Cadastro</h1>
         </section>
@@ -10,27 +13,28 @@
         <section class="cadastro_campos">
             <aside class="cadastro_codigo">
                 <label for="codigo">Código</label>
-                <input type="number" name="Codigo" id="codigo">                   
+                <input type="number" name="Codigo" id="codigo" >                   
             </aside>
             <aside class="cadastro_produto">
                 <label for="produto">Produto</label>
-                <input type="text" name="Produto" id="produto">                   
+                <input type="text" name="Produto" id="produto" >                   
             </aside>
             <aside class="cadastro_preco"> 
                 <label for="preco">Preço</label>
-                <input type="number" name="Preco" id="preco" step="any">
+                <input type="number" name="Preco" id="preco" step="any" >
             </aside>
             <aside class="cadastro_quantidade"> 
                 <label for="quantidade">Quantidade</label>
-                <input type="number" name="Quantidade" id="quantidade">
+                <input type="number" name="Quantidade" id="quantidade" >
             </aside>
             <aside class="cadastro_descricao">
                 <label for="descricao">Descrição</label>
-                <textarea  type="text" name="Descricao" id="descricao"></textarea>
+                <textarea  type="text" name="Descricao" id="descricao" ></textarea>
             </aside>
             <aside class="cadastro_imagem">
                 <label for="imagem">Imagem</label>
-                <input type="file" name="Imagem" id="imagem" accept="image/*" capture>
+                 <img id="imagem_preview" src="">
+                <input type="file" name="Imagem" id="imagem" accept="image/*" capture value="">
             </aside>
         </section>
 

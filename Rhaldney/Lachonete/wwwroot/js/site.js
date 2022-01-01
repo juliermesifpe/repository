@@ -1,4 +1,18 @@
-﻿// executa quando o botão for clicado
+﻿document.getElementById("imagem").addEventListener("change", readImage, false);
+
+function readImage() {
+    if (this.files && this.files[0]) {
+        var file = new FileReader();
+        file.onload = function (e) {
+            document.getElementById("imagem_preview").src = e.target.result;
+        };
+        file.readAsDataURL(this.files[0]);
+
+    }
+    //document.getElementById("preview").src = URL.createObjectURL(document.getElementById("imagem").files[0]);
+}
+
+// executa quando o botão for clicado
 document.getElementById("consultar").addEventListener("click", function (event) {
     // não deixa que o formulário seja enviado
     event.preventDefault();
@@ -9,7 +23,7 @@ document.getElementById("consultar").addEventListener("click", function (event) 
     // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
     if (ValidarConsultarExcluir().length > 0) return;
     // enviar formulário
-    SubmeterFormulario();
+    SubmeterFormulario("/Produto/Consultar");
 });
 
 // executa quando o botão for clicado
@@ -23,7 +37,7 @@ document.getElementById("salvar").addEventListener("click", function (event) {
     // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
     if (ValidarSalvar().length > 0) return;
     // enviar formulário
-    SubmeterFormulario();
+    SubmeterFormulario("/Produto/Salvar");
 });
 
 // executa quando o botão for clicado
@@ -37,7 +51,7 @@ document.getElementById("excluir").addEventListener("click", function (event) {
     // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
     if (ValidarConsultarExcluir().length > 0) return;
     // enviar formulário
-    SubmeterFormulario();
+    SubmeterFormulario("/Produto/Excluir");
 });
 
 // executa quando o botão for clicado
@@ -123,8 +137,9 @@ function ValidarSalvar() {
     return label;
 }
 
-function SubmeterFormulario() {
-    document.querySelector(".cadastro_formulario").submit()
+function SubmeterFormulario(controller) {
+    document.querySelector(".cadastro_formulario").action = controller;
+    document.querySelector(".cadastro_formulario").submit();
 }
 
 // função não está sendo usada

@@ -37,7 +37,11 @@ namespace Lachonete.Controllers
             produtoRepository.Salvar(produtoModel);
             return View("Index");
         }
-
+        public IActionResult Consultar(ProdutoModel produtoModel)
+        {
+            ViewBag.produtoModel = produtoRepository.Consultar(produtoModel.Codigo);
+            return View("Index", ViewBag);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -4,15 +4,15 @@
 <section class="produto">
       @if (!ViewBag.produtoModelList.Equals(""))
       {    
-        @foreach (var produtoModelList in ViewBag.produtoModelList)
+        @foreach (var produtoModel in ViewBag.produtoModelList)
         {
-            string[] produtoModel = produtoModelList.Split('#');
+            string[] produto = produtoModel.Split('#');
 
             <div class="produto_item">
                  <div class="produto_informacoes">
-                     <p>Cód: @produtoModel[1]</p>
-                    <p>Preço: R$ @produtoModel[3]</p>
-                    <p>Estoque: @produtoModel[4]</p>
+                     <p>Cód: @produto[1]</p>
+                    <p>Preço: R$ @produto[3]</p>
+                    <p>Estoque: @produto[4]</p>
                 </div>
 
                 <div class="produto_funcoes">
@@ -24,8 +24,8 @@
                 <div class="produto_descricao">
                     <details>
                         <summary>Descrição</summary>
-                        <p>@produtoModel[2]</p>
-                        <p>@produtoModel[5]</p>
+                        <p>@produto[2]</p>
+                        <p>@produto[5]</p>
                     </details>
                 </div>
             </div>

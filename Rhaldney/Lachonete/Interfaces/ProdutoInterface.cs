@@ -1,12 +1,12 @@
-﻿namespace Lachonete.Interfaces
+﻿
+namespace Lachonete.Interfaces
 {
     public interface ProdutoInterface<Produto>
     {
-        int GerarId();
         void Salvar(Produto produto);
         IEnumerable<String> Listar();
-        Task PegarId(int id);
-        void Atualizar(int id, Produto produto);
-        void Excluir(int id);
+        string Consultar(int codigo);
+        void Atualizar(int codigo, Produto produto);
+        void Excluir(int codigo);
     }
 }
