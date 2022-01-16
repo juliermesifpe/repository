@@ -1,11 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Cadastro";
-    
-   
 }
-@ViewBag.produtoModel"
 <article class="cadastro">
-    <form class="cadastro_formulario" action=""  method="post" enctype="multipart/form-data">
+    <form class="cadastro_formulario" action="/Produto/Teste"  method="post" enctype="multipart/form-data">
         <section class="cadastro_titulo">
             <h1>Cadastro</h1>
         </section>
@@ -33,16 +30,28 @@
             </aside>
             <aside class="cadastro_imagem">
                 <label for="imagem">Imagem</label>
-                 <img id="imagem_preview" src="">
-                <input type="file" name="Imagem" id="imagem" accept="image/*" capture value="">
+                <img id="imagem_preview" src="" >
+                <input type="file" id="imagem" name="Imagem" accept="image/*" capture value="">
             </aside>
         </section>
 
         <section class="cadastro_funcoes">
             <button type="submit" id="consultar">Consultar</button>
-            <button type="submit" id="salvar">Salvar</button>
+            <button type="submit" id="">Salvar</button>
             <button type="submit" id="excluir">Excluir</button>
             <button type="submit" id="limpar">Limpar</button>
         </section>
     </form>
 </article>
+@if (ViewBag.produtoModel != null && ViewBag.produtoModel != "")
+{
+    string[] produto = ViewBag.produtoModel.Split('#');
+    <script>
+            document.getElementById("codigo").value = "@produto[1]";
+            document.getElementById("produto").value = "@produto[2]";
+            document.getElementById("preco").value = "@produto[3]";
+            document.getElementById("quantidade").value = "@produto[4]";
+            document.getElementById("descricao").value = "@produto[5]";
+            document.getElementById("imagem_preview").src = "@produto[6]";
+    </script>
+}

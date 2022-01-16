@@ -7,7 +7,6 @@ function readImage() {
             document.getElementById("imagem_preview").src = e.target.result;
         };
         file.readAsDataURL(this.files[0]);
-
     }
     //document.getElementById("preview").src = URL.createObjectURL(document.getElementById("imagem").files[0]);
 }
@@ -83,6 +82,7 @@ function LimparFormulario(id) {
         document.getElementById("quantidade").value = "";
         document.getElementById("descricao").value = "";
         document.getElementById("imagem").value = "";
+        document.getElementById("imagem_preview").src = "";
         return
     }
 }

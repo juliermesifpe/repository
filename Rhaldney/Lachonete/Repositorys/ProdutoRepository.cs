@@ -18,10 +18,10 @@ namespace Lachonete.Repository
             var produtoModelList = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"));
             produtoModel.Codigo = produtoModelList.Count();
 
-            // cria uma pasta File
+            // cria uma pasta file
             Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files"));
 
-            // cria um arquivo Produto.txt na pasta File
+            // cria um arquivo Produto.txt na pasta file
             File.AppendAllText(
                 Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"),
                 $"{DateTime.Now}#{produtoModel.Codigo}#{produtoModel.Produto}#{produtoModel.Preco}#{produtoModel.Quantidade}#{produtoModel.Descricao}#{produtoModel.Imagem}{Environment.NewLine}"

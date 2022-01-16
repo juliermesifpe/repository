@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Produtos";
+}
+    @if (!ViewBag.produtoModelList.Equals(""))
+    {    
+        @foreach (var produtoModel in ViewBag.produtoModelList)
+        {
+            string[] produto = produtoModel.Split('#');
+            
+            <article class="produto">
+                    <section class="produto_informacoes">
+                        <aside class="produto_imagem">
+                            <img src="~/img/images.png" alt="">
+                        </aside>
+                        <aside class="produto_dados">
+                            <p>@produto[2]</p>
+                            <p>Código: @produto[1]</p>
+                            <p>Preço: R$ @produto[3]</p>
+                            <p>Estoque: @produto[4]</p>
+                        </aside>
+                    </section>
+                     <section class="produto_funcoes">
+                        <!--<button type="button">Adicionar<a asp-area="" asp-controller="Produto" asp-action="Adicionar" asp-route-codigo=" produto[1]"></a></button>-->
+                        <button type="button" id="adicionar" value="@produto[1]#@produto[2]#@produto[3]#@produto[4]#@produto[5]#@produto[6]">Adicionar</button>
+                        <button type="button" id="remover">Remover</button>
+                        <button type="button" id="finalizar">Finalizar</button>
+                    </section>
+                    <section class="produto_descricao">
+                        <details>
+                            <summary>Descrição</summary>
+                             <p>@produto[5]</p>
+                        </details>
+                    </section>
+            </article>
+        }
+    }
+
+

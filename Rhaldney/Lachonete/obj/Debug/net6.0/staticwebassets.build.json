@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "b4nE3n8rFXcGoLoqy0MY8IYIW1OSYjk7M9I4fTfh9r0=",
+  "Hash": "/b1K9VmASXsrA3JUezVL2UxbFRZLbklEMQReEW1U710=",
   "Source": "Lachonete",
   "BasePath": "_content/Lachonete",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Lachonete.bundle.scp.css"
     },
     {
-      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\css\\formulario.css",
+      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\css\\cadastro.css",
       "SourceId": "Lachonete",
       "SourceType": "Discovered",
       "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
       "BasePath": "_content/Lachonete",
-      "RelativePath": "css/formulario.css",
+      "RelativePath": "css/cadastro.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +65,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\formulario.css"
+      "OriginalItemSpec": "wwwroot\\css\\cadastro.css"
+    },
+    {
+      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\css\\produtos.css",
+      "SourceId": "Lachonete",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
+      "BasePath": "_content/Lachonete",
+      "RelativePath": "css/produtos.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\produtos.css"
     },
     {
       "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\css\\site.css",
@@ -136,12 +153,12 @@
       "OriginalItemSpec": "wwwroot\\img\\images.png"
     },
     {
-      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\js\\site.js",
+      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\js\\cadastro.js",
       "SourceId": "Lachonete",
       "SourceType": "Discovered",
       "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
       "BasePath": "_content/Lachonete",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/cadastro.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,7 +167,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\cadastro.js"
+    },
+    {
+      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\js\\produtos.js",
+      "SourceId": "Lachonete",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
+      "BasePath": "_content/Lachonete",
+      "RelativePath": "js/produtos.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\produtos.js"
     },
     {
       "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

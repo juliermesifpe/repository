@@ -1,4 +1,3 @@
-@media (max-width: 320px) {
     * {
         /*768px all: revert;*/
         box-sizing: border-box !important;
@@ -12,7 +11,7 @@
     }
 
     .cabecalho {
-        background-color: black;
+        background-color: blue;
     }
     .conteudo {
         background-color: darkgray;
@@ -37,123 +36,3 @@
     .menu_logo img {
         height: 15vh;
     }
-
-    .cadastro_formulario {
-        display: grid;
-        justify-items: center;
-        row-gap: 2vh;
-        margin: 4vh 0 !important;
-    }
-    .cadastro_campos aside {
-        display: grid;
-    }
-
-    .produto_item {
-        display: grid;
-        row-gap: 2vh;
-        border: 2px solid;
-        padding: 1vh 1vw !important;
-        margin: 1vh 5vw !important;
-    }
-    .produto_informacoes {
-        display: grid;
-        grid-auto-flow: column;
-        justify-content: space-between;
-    }
-    .produto_funcoes {
-        display: grid;
-        grid-auto-flow: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    .produto_funcoes img {
-        width: 15vh;
-        border: 2px solid;
-    }
-    .produto_descricao summary {
-        text-align: center;
-    }
-}
-
-@media (min-width: 320px) {
-    * {
-        /*all: revert;*/
-        box-sizing: border-box !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    body {
-        display: grid;
-        grid-template-rows: minmax(15vh,auto) minmax(70vh,auto) minmax(15vh,auto);
-    }
-    .cabecalho {
-        background-color: black;
-    }
-    .conteudo {
-        background-color: darkgray;
-        display: grid;
-        align-items: center;
-    }
-    .rodape {
-        background-color: black;
-    }
-
-    .menu {
-        display: grid;
-        grid-template-columns: 1fr 0fr;
-    }
-    .menu_navegacao {
-        display: grid;
-        grid-auto-flow: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .menu_navegacao a{
-        text-decoration: none;
-        color: white;
-    }
-    .menu_navegacao a:active {
-        color: darkgray;
-    }
-    .menu_logo img{
-        height: 15vh;
-    }
-
-    .cadastro_formulario {
-        display: grid;
-        justify-items: center;
-        row-gap: 2vh;
-        margin: 4vh 0 !important;
-    }
-    .cadastro_campos aside{
-        display:grid;
-    }
-
-    .produto_item {
-        display: grid;
-        row-gap: 2vh;
-        border: 2px solid;
-        padding: 1vh 1vw !important;
-        margin: 1vh 5vw !important;
-    }
-    .produto_informacoes {
-        display: grid;
-        grid-auto-flow: column;
-        justify-content: space-between;
-       
-    }
-    .produto_funcoes {
-        display: grid;
-        grid-auto-flow: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    .produto_funcoes img {
-        width: 15vh;
-        border: 2px solid;
-    }
-    .produto_descricao summary{
-        text-align:center;
-    }
-}

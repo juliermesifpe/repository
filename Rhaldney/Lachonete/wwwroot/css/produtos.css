@@ -1,0 +1,32 @@
+.produto {
+    display: grid;
+    padding: 1vh 1vw !important;
+    margin: 1vh 5vw !important;
+    border: 2px solid;
+    row-gap: 2vh
+}
+.produto_informacoes {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+}
+.produto_imagem {
+   
+}
+.produto_imagem img {
+    width: 20vh;
+    border: 2px solid;
+}
+.produto_dados {
+
+}
+.produto_descricao summary {
+    text-align: center
+}
+.produto_funcoes {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-evenly;
+}
+
+

@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>@ViewData["Title"]</title>
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-         <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/cadastro.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/produtos.css" asp-append-version="true" />
         <link rel="stylesheet" href="~/Lachonete.styles.css" asp-append-version="true" />
     </head>
 
@@ -13,9 +15,9 @@
        <header class="cabecalho"> 
            <section class="menu"> 
                <nav class="menu_navegacao">
-                    <a asp-area="" asp-controller="Produto" asp-action="Index">Cadastro</a>
-                    <a asp-area="" asp-controller="Produto" asp-action="Produto">Produto</a>
-                    <a asp-area="" asp-controller="Produto" asp-action="Compra">Compras</a>
+                    <a asp-area="" asp-controller="Produto" asp-action="Cadastro">Cadastro</a>
+                    <a asp-area="" asp-controller="Produto" asp-action="Produtos">Produtos</a>
+                    <a asp-area="" asp-controller="Produto" asp-action="Compras">Compras</a>
                 </nav>
                 
                 <figure class="menu_logo">
@@ -29,14 +31,15 @@
         </main>
 
       <footer class="rodape">
-            <section class="contato">
+        <section class="contato">
 
-            </section>
+        </section>
         </footer>
-
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+         <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/cadastro.js" asp-append-version="true"></script>
+        <script src="~/js/produtos.js" asp-append-version="true"></script>
         @await RenderSectionAsync("Scripts", required: false)
     </body>
 </html>

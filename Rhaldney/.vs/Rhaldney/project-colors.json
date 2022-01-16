@@ -5,7 +5,22 @@
       "ProjectGuid": "b6c0015b-71a4-4c02-a9ee-874c3aa918cb",
       "DisplayName": "Lachonete",
       "ColorIndex": 0
+    },
+    "4f7cf1e8-094a-40ee-b589-27b110035cbd": {
+      "ProjectGuid": "4f7cf1e8-094a-40ee-b589-27b110035cbd",
+      "DisplayName": "WebApplication1",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    },
+    "85064556-1af7-478c-bb76-7582cbb7c521": {
+      "ProjectGuid": "85064556-1af7-478c-bb76-7582cbb7c521",
+      "DisplayName": "WebApplication1",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }

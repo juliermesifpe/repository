@@ -3,6 +3,7 @@ namespace Lachonete.Interfaces
 {
     public interface ProdutoInterface<Produto>
     {
+
         void Salvar(Produto produto);
         IEnumerable<String> Listar();
         string Consultar(int codigo);
