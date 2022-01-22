@@ -25,5 +25,9 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Produto}/{action=Cadastro}/{id?}");
 
+app.MapControllerRoute(
+    name: "",
+    pattern: "{controller=Teste}/{action=TesteView}/{id?}");
+
 app.Run();
 

@@ -1,16 +1,5 @@
 ﻿document.getElementById("imagem").addEventListener("change", readImage, false);
 
-function readImage() {
-    if (this.files && this.files[0]) {
-        var file = new FileReader();
-        file.onload = function (e) {
-            document.getElementById("imagem_preview").src = e.target.result;
-        };
-        file.readAsDataURL(this.files[0]);
-    }
-    //document.getElementById("preview").src = URL.createObjectURL(document.getElementById("imagem").files[0]);
-}
-
 // executa quando o botão for clicado
 document.getElementById("consultar").addEventListener("click", function (event) {
     // não deixa que o formulário seja enviado
@@ -63,6 +52,16 @@ document.getElementById("limpar").addEventListener("click", function (event) {
     ImprimirConsole(document.getElementById("limpar").id);
 });
 
+// função usada para fazer uma prévia da imagem do produto
+function readImage() {
+    if (this.files && this.files[0]) {
+        var file = new FileReader
+        file.onload = function (e) {
+            document.getElementById("imagem_preview").src = e.target.result;
+        };
+        file.readAsDataURL(this.files[0]);
+    }
+}
 // função usada para limpar dados de acordo com o butão clicado
 function LimparFormulario(id) {
     // limpa os dados que não são necessários para o salvar

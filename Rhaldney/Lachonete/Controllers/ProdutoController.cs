@@ -1,22 +1,15 @@
 ﻿using Lachonete.Models;
-using Lachonete.Repository;
 using Lachonete.Repositorys;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace Lachonete.Controllers
-{
+{   
+    
     public class ProdutoController : Controller
     {
         static ProdutoRepository produtoRepository = new ProdutoRepository();
         static PedidoRepository pedidoRepository = new PedidoRepository();
-
-        private readonly ILogger<ProdutoController> _logger;
-
-        public ProdutoController(ILogger<ProdutoController> logger)
-        {
-            _logger = logger;
-        }
 
         public IActionResult Cadastro()
         {
@@ -25,19 +18,13 @@ namespace Lachonete.Controllers
 
         public IActionResult Produtos()
         {
-            ViewBag.produtoModelList = produtoRepository.Listar();
+            ViewBag.produtoModelList = produtoRepository.Enumerar();
             return View(ViewBag);
         }
 
-        public IActionResult Compras()
+        public IActionResult Carrinho()
         {
             return View();
-        }
-
-        public IActionResult Teste()
-        {
-            var preco = HttpContext.Request.Query["Preco"];
-            return View("Cadastro");
         }
 
         [HttpPost]
@@ -53,7 +40,7 @@ namespace Lachonete.Controllers
         }
 
         [HttpGet("[controller]/[action]/{codigo:int}/{produto}/{preco:double}/{quantidade:int}/{descricao}/{imagem}")]
-        public void Adicionar(int codigo, string produto, double preco, int quantidade, string descricao, string imagem)
+        public void Adicionar(int codigo, string produto, double preco, int quantidade, string descricao, IFormFile imagem)
         {
             ProdutoModel produtoModel = new ProdutoModel();
             produtoModel.Codigo = codigo;
@@ -66,12 +53,6 @@ namespace Lachonete.Controllers
             PedidoModel pedidoModel = new PedidoModel();
             pedidoModel.ProdutoModel = produtoModel;
             pedidoRepository.Adicionar(pedidoModel);
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

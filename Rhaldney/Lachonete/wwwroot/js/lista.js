@@ -8,7 +8,7 @@
         var imagem = event.target.value.split("#")[5];
 
         var request = new XMLHttpRequest();
-        request.open("GET", "https://localhost:7256/Produto/Adicionar" + "/" + codigo + "/" + produto + "/" + preco + "/" + quantidade + "/" + descricao + "/" + "null" );
+        request.open("GET", "https://localhost:7256/Pedido/Adicionar" + "/" + codigo + "/" + produto + "/" + preco + "/" + quantidade + "/" + descricao + "/" + "null" );
         request.send();
         alert("Adicionado");
     });

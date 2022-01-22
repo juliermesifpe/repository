@@ -1,13 +1,17 @@
-﻿
+﻿using Lachonete.Models;
+
 namespace Lachonete.Interfaces
 {
-    public interface ProdutoInterface<Produto>
+    public interface ProdutoInterface<ProdutoModel>
     {
+        void Salvar(ProdutoModel produtoModel);
+        string Consultar(int produtoCodigo);
+        void Atualizar(int produtoCodigo, ProdutoModel produtoModel);
+        void Excluir(int produtoCodigo);
+        IEnumerable<String> Enumerar();
 
-        void Salvar(Produto produto);
-        IEnumerable<String> Listar();
-        string Consultar(int codigo);
-        void Atualizar(int codigo, Produto produto);
-        void Excluir(int codigo);
+        List<ProdutoModel> Listar();
+        void Adicionar(ProdutoModel produtoModel);
+        void Remover(ProdutoModel produtoModel);
     }
 }

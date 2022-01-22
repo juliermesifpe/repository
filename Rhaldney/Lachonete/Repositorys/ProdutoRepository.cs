@@ -1,35 +1,26 @@
 ﻿using Lachonete.Interfaces;
 using Lachonete.Models;
 
-namespace Lachonete.Repository
+namespace Lachonete.Repositorys
 {
     public class ProdutoRepository : ProdutoInterface<ProdutoModel>
     {
-        /* private List<ProdutoModel> produtoModelList = new List<ProdutoModel>();
-
-        public List<produtoModelList> Listar()
-        {
-            return produtoModelList;
-        }*/
+        private List<ProdutoModel> produtoModelList = new List<ProdutoModel>();
 
         public void Salvar(ProdutoModel produtoModel)
         {
-            // gera um Id "poderia seru um método GerarId"
-            var produtoModelList = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"));
-            produtoModel.Codigo = produtoModelList.Count();
-
+            
             // cria uma pasta file
             Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files"));
 
             // cria um arquivo Produto.txt na pasta file
             File.AppendAllText(
                 Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"),
-                $"{DateTime.Now}#{produtoModel.Codigo}#{produtoModel.Produto}#{produtoModel.Preco}#{produtoModel.Quantidade}#{produtoModel.Descricao}#{produtoModel.Imagem}{Environment.NewLine}"
-            );
+                $"{DateTime.Now}#{produtoModel.}#{produtoModel.produto()}#{produtoModel.preco()}#{produtoModel.quantidade()}#{produtoModel.descricao()}#{produtoModel.GerarImagem()}{Environment.NewLine}");
 
         }
 
-        public IEnumerable<string> Listar()
+        public IEnumerable<string> Enumerar()
         {
             var produtoModelList = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "produto.txt"));
             return produtoModelList;
@@ -37,11 +28,9 @@ namespace Lachonete.Repository
 
         public string Consultar(int codigo)
         {
-           
+            var produtoModelList = Enumerar();
 
-           var produtoModelList = Listar();
-
-            foreach(var produtoModel in produtoModelList)
+            foreach (var produtoModel in produtoModelList)
             {
                 string[] produto = produtoModel.Split('#');
 
@@ -63,6 +52,19 @@ namespace Lachonete.Repository
             throw new NotImplementedException();
         }
 
-       
+        public List<ProdutoModel> Listar()
+        {
+            return produtoModelList;
+        }
+
+        public void Adicionar(ProdutoModel produtoModel)
+        {
+            produtoModelList.Add(produtoModel);
+        }
+
+        public void Remover(ProdutoModel produtoModel)
+        {
+            produtoModelList.Remove(produtoModel);
+        }
     }
 }

@@ -20,7 +20,17 @@
       "ProjectGuid": "85064556-1af7-478c-bb76-7582cbb7c521",
       "DisplayName": "WebApplication1",
       "ColorIndex": 2
+    },
+    "1da72b3d-8d60-465f-b26d-bcb6f5d88b98": {
+      "ProjectGuid": "1da72b3d-8d60-465f-b26d-bcb6f5d88b98",
+      "DisplayName": "Teste",
+      "ColorIndex": 3
+    },
+    "394171d6-aa41-4d9b-8681-ad8e4214e7a1": {
+      "ProjectGuid": "394171d6-aa41-4d9b-8681-ad8e4214e7a1",
+      "DisplayName": "Teste",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 5
 }

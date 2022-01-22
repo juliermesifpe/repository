@@ -2,7 +2,7 @@
     ViewData["Title"] = "Cadastro";
 }
 <article class="cadastro">
-    <form class="cadastro_formulario" action="/Produto/Teste"  method="post" enctype="multipart/form-data">
+    <form class="cadastro_formulario" action="/Produto/Salvar"  method="post" enctype="multipart/form-data">
         <section class="cadastro_titulo">
             <h1>Cadastro</h1>
         </section>
@@ -31,13 +31,13 @@
             <aside class="cadastro_imagem">
                 <label for="imagem">Imagem</label>
                 <img id="imagem_preview" src="" >
-                <input type="file" id="imagem" name="Imagem" accept="image/*" capture value="">
+                <input type="file" id="imagem" name="Imagem" accept="image/*">
             </aside>
         </section>
 
         <section class="cadastro_funcoes">
             <button type="submit" id="consultar">Consultar</button>
-            <button type="submit" id="">Salvar</button>
+            <button type="submit" id="salvar">Salvar</button>
             <button type="submit" id="excluir">Excluir</button>
             <button type="submit" id="limpar">Limpar</button>
         </section>
