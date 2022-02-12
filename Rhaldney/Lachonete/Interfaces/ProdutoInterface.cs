@@ -4,10 +4,12 @@ namespace Lachonete.Interfaces
 {
     public interface ProdutoInterface<ProdutoModel>
     {
+        int GerarId();
+        string GerarImagem(IFormFile produtoFileImagem);
         void Salvar(ProdutoModel produtoModel);
         string Consultar(int produtoCodigo);
-        void Atualizar(int produtoCodigo, ProdutoModel produtoModel);
         void Excluir(int produtoCodigo);
+        void Atualizar(int produtoCodigo, ProdutoModel produtoModel);
         IEnumerable<String> Enumerar();
 
         List<ProdutoModel> Listar();

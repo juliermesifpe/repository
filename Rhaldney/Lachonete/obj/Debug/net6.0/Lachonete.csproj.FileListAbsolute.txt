@@ -8,7 +8,6 @@ G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\Lachonete.runtimecon
 G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\Lachonete.dll
 G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\ref\Lachonete.dll
 G:\Meu Drive\repository\Rhaldney\Lachonete\bin\Debug\net6.0\Lachonete.pdb
-G:\Meu Drive\repository\Rhaldney\Lachonete\obj\Debug\net6.0\Lachonete.csproj.AssemblyReference.cache
 G:\Meu Drive\repository\Rhaldney\Lachonete\obj\Debug\net6.0\Lachonete.GeneratedMSBuildEditorConfig.editorconfig
 G:\Meu Drive\repository\Rhaldney\Lachonete\obj\Debug\net6.0\Lachonete.AssemblyInfoInputs.cache
 G:\Meu Drive\repository\Rhaldney\Lachonete\obj\Debug\net6.0\Lachonete.AssemblyInfo.cs
@@ -24,3 +23,4 @@ G:\Meu Drive\repository\Rhaldney\Lachonete\obj\Debug\net6.0\Lachonete.dll
 G:\Meu Drive\repository\Rhaldney\Lachonete\obj\Debug\net6.0\ref\Lachonete.dll
 G:\Meu Drive\repository\Rhaldney\Lachonete\obj\Debug\net6.0\Lachonete.pdb
 G:\Meu Drive\repository\Rhaldney\Lachonete\obj\Debug\net6.0\Lachonete.genruntimeconfig.cache
+G:\Meu Drive\repository\Rhaldney\Lachonete\obj\Debug\net6.0\Lachonete.csproj.AssemblyReference.cache

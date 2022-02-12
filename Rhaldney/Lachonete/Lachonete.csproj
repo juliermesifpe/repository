@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\lista.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="comments.txt" />
   </ItemGroup>
 

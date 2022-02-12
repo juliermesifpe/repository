@@ -2,33 +2,34 @@
     ViewData["Title"] = "Carrinho";
 }
  @if (!ViewBag.produtoModelList.Equals(""))
-    {    
+{
+    @ViewBag.produtoModelList.Count;
+    <article class="titulo_principal">
+            <h1>Meus Produtos</h1>
+         </article>
         @foreach (var produtoModel in ViewBag.produtoModelList)
         {
-            string[] produto = produtoModel.Split('#');
-            
             <article class="produto">
                     <section class="produto_informacoes">
                         <aside class="produto_imagem">
-                            <img src="@produto[6]" alt="">
+                            <img src="@produtoModel.retornarImagem()" alt="">
                         </aside>
                         <aside class="produto_dados">
-                            <p>@produto[2]</p>
-                            <p>Código: @produto[1]</p>
-                            <p>Preço: R$ @produto[3]</p>
-                            <p>Estoque: @produto[4]</p>
+                            <p>@produtoModel.retornarProduto()</p>
+                            <p>Código: @produtoModel.retornarCodigo()</p>
+                            <p>Preço: R$ @produtoModel.retornarPreco()</p>
+                            <p>Quantidade: @produtoModel.retornarQuantidade()</p>
                         </aside>
                     </section>
                      <section class="produto_funcoes">
-                        <!--<button type="button">Adicionar<a asp-area="" asp-controller="Produto" asp-action="Adicionar" asp-route-codigo=" produto[1]"></a></button>-->
-                        <button type="button" id="adicionar" value="@produto[1]#@produto[2]#@produto[3]#@produto[4]#@produto[5]#@produto[6]">Adicionar</button>
-                        <button type="button" id="remover">Remover</button>
-                        <button type="button" id="finalizar">Finalizar</button>
+                        <button><a asp-area="" asp-controller="Produto" asp-action="Produtos">Produtos</a></button>
+                        <button type="button" id="remover" data-button="Remover" value="@produtoModel.retornarCodigo()">Remover</button>
+                        <button type="button" id="finalizar" data-button="Concluir">Concluir</button>
                     </section>
                     <section class="produto_descricao">
                         <details>
                             <summary>Descrição</summary>
-                             <p>@produto[5]</p>
+                             <p>@produtoModel.retornarDescricao()</p>
                         </details>
                     </section>
             </article>

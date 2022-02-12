@@ -1,57 +1,65 @@
 ﻿@{
     ViewData["Title"] = "Cadastro";
 }
-<article class="cadastro">
-    <form class="cadastro_formulario" action="/Produto/Salvar"  method="post" enctype="multipart/form-data">
-        <section class="cadastro_titulo">
-            <h1>Cadastro</h1>
-        </section>
-
-        <section class="cadastro_campos">
-            <aside class="cadastro_codigo">
-                <label for="codigo">Código</label>
-                <input type="number" name="Codigo" id="codigo" >                   
-            </aside>
-            <aside class="cadastro_produto">
-                <label for="produto">Produto</label>
-                <input type="text" name="Produto" id="produto" >                   
-            </aside>
-            <aside class="cadastro_preco"> 
-                <label for="preco">Preço</label>
-                <input type="number" name="Preco" id="preco" step="any" >
-            </aside>
-            <aside class="cadastro_quantidade"> 
-                <label for="quantidade">Quantidade</label>
-                <input type="number" name="Quantidade" id="quantidade" >
-            </aside>
-            <aside class="cadastro_descricao">
-                <label for="descricao">Descrição</label>
-                <textarea  type="text" name="Descricao" id="descricao" ></textarea>
-            </aside>
-            <aside class="cadastro_imagem">
-                <label for="imagem">Imagem</label>
-                <img id="imagem_preview" src="" >
-                <input type="file" id="imagem" name="Imagem" accept="image/*">
-            </aside>
-        </section>
-
-        <section class="cadastro_funcoes">
-            <button type="submit" id="consultar">Consultar</button>
-            <button type="submit" id="salvar">Salvar</button>
-            <button type="submit" id="excluir">Excluir</button>
-            <button type="submit" id="limpar">Limpar</button>
-        </section>
-    </form>
+<article class="titulo_principal">
+    <h1>Cadastro</h1>
 </article>
+ <article class="cadastro">
+            <form class="cadastro_formulario" action=""  method="post" enctype="multipart/form-data" data-form="produto">
+                <section class="cadastro_campos">
+                    <aside class="cadastro_codigo">
+                        <label for="codigo" data-label="codigo">Código</label>
+                        <input type="number" name="Codigo" id="codigo" data-input="codigo"/>
+                    </aside>
+                    <aside class="cadastro_produto">
+                        <label for="produto" data-label="produto">Produto</label>
+                        <input type="text" name="Produto" id="produto" data-input="produto"/>                   
+                    </aside>
+                    <aside class="cadastro_preco"> 
+                        <label for="preco" data-label="preco">Preço</label>
+                        <input type="number" name="Preco" id="preco" step="any" data-input="preco"/>
+                    </aside>
+                    <aside class="cadastro_quantidade"> 
+                        <label for="quantidade" data-label="quantidade">Quantidade</label>
+                        <input type="number" name="Quantidade" id="quantidade" data-input="quantidade"/>
+                    </aside>
+                    <aside class="cadastro_descricao">
+                        <label for="descricao" data-label="descricao">Descrição</label>
+                        <textarea  type="text" name="Descricao" id="descricao" data-input="descricao"></textarea>
+                    </aside>
+                    <aside class="cadastro_imagem">
+                        <label for="imagem" data-label="imagem">Imagem</label>
+                        <img id="preview" data-img="imagem"/>
+                        <input type="file" id="imagem" name="FileImagem" accept="image/*" data-input="imagem"/>
+                    </aside>
+                </section>
+        
+                <section class="cadastro_funcoes">
+                    <button type="submit" id="" data-button="Consultar">Consultar</button>
+                    <button type="submit" id="" data-button="Salvar">Salvar</button>
+                    <button type="submit" id="" data-button="Excluir">Excluir</button>
+                    <button type="reset" id="" data-button="Limpar">Limpar</button>
+                </section>
+            </form>
+        </article>
+
 @if (ViewBag.produtoModel != null && ViewBag.produtoModel != "")
-{
+{   
     string[] produto = ViewBag.produtoModel.Split('#');
+
+    for (int i = 0; i < produto.Length-2; i++)
+    {
+       <script>
+           var input = document.querySelectorAll("[data-input]");
+           input[@i].value = "@produto[i+1]";
+      </script> 
+    }
     <script>
-            document.getElementById("codigo").value = "@produto[1]";
-            document.getElementById("produto").value = "@produto[2]";
-            document.getElementById("preco").value = "@produto[3]";
-            document.getElementById("quantidade").value = "@produto[4]";
-            document.getElementById("descricao").value = "@produto[5]";
-            document.getElementById("imagem_preview").src = "@produto[6]";
-    </script>
+          var input = document.querySelector("[data-input=codigo]");
+          input.disabled = true;
+
+          var img = document.querySelector("[data-img=imagem]");
+          img.src = @produto[produto.Length-1];
+    </script> 
+    
 }

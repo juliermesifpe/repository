@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "S+HqK5c+SZO2P8raQEK873xxWPVyiFI19q4qrGCnINM=",
+  "Hash": "zy+GE4/iMMeGAAH/6kAiiIbCu+GcqiWwa/JIiqcmO4g=",
   "Source": "Lachonete",
   "BasePath": "_content/Lachonete",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Lachonete.bundle.scp.css"
     },
     {
-      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\css\\cadastro.css",
+      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\css\\produto.css",
       "SourceId": "Lachonete",
       "SourceType": "Discovered",
       "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
       "BasePath": "_content/Lachonete",
-      "RelativePath": "css/cadastro.css",
+      "RelativePath": "css/produto.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,41 +65,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\cadastro.css"
-    },
-    {
-      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\css\\lista.css",
-      "SourceId": "Lachonete",
-      "SourceType": "Discovered",
-      "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
-      "BasePath": "_content/Lachonete",
-      "RelativePath": "css/lista.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\lista.css"
-    },
-    {
-      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\css\\shared.css",
-      "SourceId": "Lachonete",
-      "SourceType": "Discovered",
-      "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
-      "BasePath": "_content/Lachonete",
-      "RelativePath": "css/shared.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\shared.css"
+      "OriginalItemSpec": "wwwroot\\css\\produto.css"
     },
     {
       "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\favicon.ico",
@@ -153,12 +119,12 @@
       "OriginalItemSpec": "wwwroot\\img\\images.png"
     },
     {
-      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\js\\cadastro.js",
+      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\js\\cadastro - Cópia.js",
       "SourceId": "Lachonete",
       "SourceType": "Discovered",
       "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
       "BasePath": "_content/Lachonete",
-      "RelativePath": "js/cadastro.js",
+      "RelativePath": "js/cadastro - Cópia.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,15 +133,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\cadastro.js"
+      "OriginalItemSpec": "wwwroot\\js\\cadastro - Cópia.js"
     },
     {
-      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\js\\lista.js",
+      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\js\\lista - Cópia.js",
       "SourceId": "Lachonete",
       "SourceType": "Discovered",
       "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
       "BasePath": "_content/Lachonete",
-      "RelativePath": "js/lista.js",
+      "RelativePath": "js/lista - Cópia.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,7 +150,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\lista.js"
+      "OriginalItemSpec": "wwwroot\\js\\lista - Cópia.js"
+    },
+    {
+      "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\js\\produto.js",
+      "SourceId": "Lachonete",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\",
+      "BasePath": "_content/Lachonete",
+      "RelativePath": "js/produto.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\produto.js"
     },
     {
       "Identity": "G:\\Meu Drive\\repository\\Rhaldney\\Lachonete\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

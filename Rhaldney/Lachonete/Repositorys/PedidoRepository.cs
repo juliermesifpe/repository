@@ -18,10 +18,6 @@ namespace Lachonete.Repositorys
         {
             throw new NotImplementedException();
         }
-        public int GeraIdSalvar()
-        {
-            return listPedidoModel.Count;
-        }
         public void Salvar(PedidoModel produto)
         {
             throw new NotImplementedException();

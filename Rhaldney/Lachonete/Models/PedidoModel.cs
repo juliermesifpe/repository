@@ -2,13 +2,13 @@
 {
     public class PedidoModel
     {
-        public int IdPedido { get; set; }
+        public int Pedido { get; set; }
         public string? Observacao { get; set; }
         public ProdutoModel? ProdutoModel { get; set; }
 
-        public int retornarIdPedido()
+        public int retornarPedido()
         {
-            return this.IdPedido;
+            return this.Pedido;
         }
         public string retornarObservacao()
         {

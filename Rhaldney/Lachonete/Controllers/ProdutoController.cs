@@ -24,35 +24,42 @@ namespace Lachonete.Controllers
 
         public IActionResult Carrinho()
         {
-            return View();
+            ViewBag.produtoModelList = produtoRepository.Listar();
+            return View(ViewBag);
         }
 
         [HttpPost]
         public IActionResult Salvar(ProdutoModel produtoModel)
         {
+            produtoModel.Codigo = produtoRepository.GerarId();
+            produtoModel.Imagem = produtoRepository.GerarImagem(produtoModel.FileImagem);
             produtoRepository.Salvar(produtoModel);
             return View("Cadastro");
         }
+        [HttpPost]
         public IActionResult Consultar(ProdutoModel produtoModel)
         {
             ViewBag.produtoModel = produtoRepository.Consultar(produtoModel.Codigo);
             return View("Cadastro", ViewBag);
         }
 
-        [HttpGet("[controller]/[action]/{codigo:int}/{produto}/{preco:double}/{quantidade:int}/{descricao}/{imagem}")]
-        public void Adicionar(int codigo, string produto, double preco, int quantidade, string descricao, IFormFile imagem)
+        //[HttpGet("[controller]/[action]/{codigo:int}/{produto}/{preco:double}/{quantidade:int}/{descricao}/{imagem}")]
+        [HttpGet("[controller]/[action]/{produtoCodigo:int}")]
+        public void Adicionar(int produtoCodigo)
+        {
+            //string produto = produtoRepository.Consultar(produtoCodigo);
+            ProdutoModel produtoModel = new ProdutoModel();
+            produtoModel.Codigo = produtoCodigo;
+            produtoRepository.Adicionar(produtoModel);
+        }
+
+        [HttpGet("[controller]/[action]/{produtoCodigo:int}")]
+        public void Remover(int produtoCodigo)
         {
             ProdutoModel produtoModel = new ProdutoModel();
-            produtoModel.Codigo = codigo;
-            produtoModel.Produto = produto;
-            produtoModel.Preco = preco;
-            produtoModel.Quantidade = quantidade;
-            produtoModel.Descricao = descricao;
-            produtoModel.Imagem = imagem;
-
-            PedidoModel pedidoModel = new PedidoModel();
-            pedidoModel.ProdutoModel = produtoModel;
-            pedidoRepository.Adicionar(pedidoModel);
+            produtoModel.Codigo = produtoCodigo;
+            produtoRepository.Remover(produtoModel);
         }
+
     }
 }

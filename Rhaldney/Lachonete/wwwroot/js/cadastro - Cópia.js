@@ -11,7 +11,7 @@ document.getElementById("consultar").addEventListener("click", function (event) 
     // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
     if (ValidarConsultarExcluir().length > 0) return;
     // enviar formulário
-    SubmeterFormulario("/Produto/Consultar");
+    SubmeterPost("/Produto/Consultar");
 });
 
 // executa quando o botão for clicado
@@ -25,7 +25,7 @@ document.getElementById("salvar").addEventListener("click", function (event) {
     // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
     if (ValidarSalvar().length > 0) return;
     // enviar formulário
-    SubmeterFormulario("/Produto/Salvar");
+    SubmeterPost("/Produto/Salvar");
 });
 
 // executa quando o botão for clicado
@@ -39,7 +39,7 @@ document.getElementById("excluir").addEventListener("click", function (event) {
     // executa a função e verifica se todos os campos necessários foram preenchidos se faltar algum campo saia da função
     if (ValidarConsultarExcluir().length > 0) return;
     // enviar formulário
-    SubmeterFormulario("/Produto/Excluir");
+    SubmeterPost("/Produto/Excluir");
 });
 
 // executa quando o botão for clicado
@@ -112,6 +112,7 @@ function ValidarConsultarExcluir() {
 }
 function ValidarSalvar() {
     var label = [];
+
     if (document.getElementById("produto").value == "") {
         document.getElementById("produto").focus();
         label.push(document.querySelector(".cadastro_campos").querySelectorAll("label")[1].textContent = "Produto não pode ficar em branco!");
@@ -136,7 +137,7 @@ function ValidarSalvar() {
     return label;
 }
 
-function SubmeterFormulario(controller) {
+function SubmeterPost(controller) {
     document.querySelector(".cadastro_formulario").action = controller;
     document.querySelector(".cadastro_formulario").submit();
 }
